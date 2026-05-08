@@ -1,0 +1,45 @@
+body {
+  background: #131b21;
+}
+
+.merkez-yazi {
+    position: fixed;    /* Ekranın her yerinden bağımsız, sabit konum */
+    top: 50%;           /* Üstten tam orta */
+    left: 50%;          /* Soldan tam orta */
+    transform: translate(-50%, -50%); /* Kendi boyutunu hesaplayıp tam merkeze oturtur */
+    z-index: 9999;      /* Her şeyin (çiçeklerin bile) en önünde durmasını sağlar */
+    text-align: center;
+    pointer-events: none; /* Mouse ile çiçeklere tıklamana engel olmaz */
+}
+
+.merkez-yazi h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ec6313;     /* Çiçeklerdeki koyu mavi tonu */
+    font-size: 45px;
+    margin: 0;
+    text-shadow: 0 0 10px rgba(255,255,255,0.7); /* Arkadaki dallar arasında yazının okunmasını sağlar */
+}
+.container {
+  width: 50%;
+  margin: 0 auto;
+}
+
+svg#flower-frame {
+  height: 90vh;
+  width: 100%;
+}
+
+#Footer_group_1_,
+[id^=PinkFlowerGroup],
+[id^=BaseGroup] path,
+[id^=LeafGroup] path,
+path[id^=Stroke],
+g[id^=BudGroup] g[id^=BudGroup] g[id^=Bud],
+#Bud8_1_,
+#Bud10_1_,
+#Bud23_1_,
+#Bud26_1_,
+[id^=Dots],
+[id^=Flourish] {
+  visibility: hidden;
+}
